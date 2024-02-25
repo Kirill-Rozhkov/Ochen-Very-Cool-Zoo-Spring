@@ -1,7 +1,10 @@
 package kz.aitu.ochenverycoolzoo.models;
 
+import lombok.Data;
+
 import java.util.ArrayList;
 
+@Data
 public class Store {
     private ArrayList<Item> items;
 

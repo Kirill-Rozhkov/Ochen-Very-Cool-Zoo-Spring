@@ -55,21 +55,21 @@ public class MyApplication {
     }
 
     private void storeMenu() {
-        String response = controller.getAllItems();
+//        String response = controller.getAllItems();
 
-        System.out.println("Store menu");
-        System.out.println("Your have " + player.getCoins() + " coins");
-
-        System.out.println("Select the item you are going to buy (1-" + response.length() + "): ");
-        System.out.println(response);
+//        System.out.println("Store menu");
+//        System.out.println("Your have " + player.getCoins() + " coins");
+//
+//        System.out.println("Select the item you are going to buy (1-" + response.length() + "): ");
+//        System.out.println(response);
 
         int id = scanner.nextInt();
-        Item item = controller.getItem(id);
-        player.addItem(item);
+//        Item item = controller.getItem(id);
+//        player.addItem(item);
     }
 
     public void getAnimalsByLocationMenu() {
-        String response = controller.getAnimalsByLocation();
-        System.out.println(response);
+//        String response = controller.getAnimalsByLocation();
+//        System.out.println(response);
     }
 }

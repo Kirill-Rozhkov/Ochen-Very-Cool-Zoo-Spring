@@ -1,42 +1,17 @@
 package kz.aitu.ochenverycoolzoo.models;
 
+import jakarta.persistence.*;
+import lombok.Data;
+
+@Data
+@Entity
+@Embeddable
 public class Action {
-    private static int id = 0;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
     private String request;
     private String response;
-
-    public Action(String request, String response) {
-        id++;
-        this.request = request;
-        this.response = response;
-    }
-
-    public Action(int id, String request, String response) {
-        Action.id = id;
-        this.request = request;
-        this.response = response;
-    }
-
-
-    public void setRequest(String request) {
-        this.request = request;
-    }
-
-    public void setResponse(String response) {
-        this.response = response;
-    }
-
-    public static int getId() {
-        return id;
-    }
-
-    public String getRequest() {
-        return request;
-    }
-
-    public String getResponse() {
-        return response;
-    }
 
     @Override
     public String toString() {

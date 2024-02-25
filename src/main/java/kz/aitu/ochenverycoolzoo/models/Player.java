@@ -1,23 +1,21 @@
 package kz.aitu.ochenverycoolzoo.models;
 
+import lombok.Data;
+import lombok.Getter;
+
 import java.util.ArrayList;
 
+@Data
 public class Player {
+    @Getter
     private int coins = 500;
+    @Getter
     private int animal_coins = 0;
     private ArrayList<Item> bag;
     private WalletTimer walletTimer;
 
     public Player() {
         walletTimer = new WalletTimer(5);
-    }
-
-    public int getCoins() {
-        return coins;
-    }
-
-    public int getAnimal_coins() {
-        return animal_coins;
     }
 
     public void addCoins() {

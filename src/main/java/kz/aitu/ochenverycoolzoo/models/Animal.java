@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @Entity
@@ -16,10 +17,7 @@ public class Animal {
     private int age;
     private String type;
     private String location;
-    @ElementCollection
-    @Column(name = "actions", columnDefinition = "jsonb")
-    private ArrayList<Action> actions;
-
+    private List<Integer> actions_id;
 
     @Override
     public String toString() {
@@ -28,7 +26,7 @@ public class Animal {
                 ", age=" + age +
                 ", type='" + type + '\'' +
                 ", location='" + location + '\'' +
-                ", actions=" + actions.toString() +
+                ", actions=" + actions_id.toString() +
                 '}';
     }
 }

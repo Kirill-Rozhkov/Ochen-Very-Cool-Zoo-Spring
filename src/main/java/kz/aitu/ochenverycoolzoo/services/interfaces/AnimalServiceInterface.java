@@ -9,3 +9,4 @@ public interface AnimalServiceInterface {
     Animal getById(int id);
     Animal create(Animal animal);
 }
+

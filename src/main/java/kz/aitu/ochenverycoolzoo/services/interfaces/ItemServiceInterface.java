@@ -8,3 +8,4 @@ public interface ItemServiceInterface {
     Item getById(int id);
     Item create(Item item);
 }
+
